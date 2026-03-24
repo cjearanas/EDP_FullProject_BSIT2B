@@ -14,8 +14,8 @@ namespace LoginForm
     {
         String[,] userCredentials =
         {
-            {"admin","admin","Carl Aranas" },
-            {"cashier","password","sheldon cooper" }
+            {"admin","1234","Carl Aranas" },
+            {"bossing","Aray koo","Boss" }
         };
         public Form1()
         {
@@ -60,6 +60,7 @@ namespace LoginForm
                             frmHome frm = new frmHome();
                             MessageBox.Show("Welcome " + userCredentials[x, 2]);
                             this.Hide();
+                            frm.Owner = this;
                             frm.Show(); 
                             break;
                         }

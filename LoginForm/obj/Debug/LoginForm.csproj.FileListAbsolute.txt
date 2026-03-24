@@ -8,3 +8,20 @@ C:\Users\COLLEGE STUDENT.DESKTOP-JC113BJ\source\repos\LoginForm\LoginForm\obj\De
 C:\Users\COLLEGE STUDENT.DESKTOP-JC113BJ\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.csproj.CoreCompileInputs.cache
 C:\Users\COLLEGE STUDENT.DESKTOP-JC113BJ\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.exe
 C:\Users\COLLEGE STUDENT.DESKTOP-JC113BJ\source\repos\LoginForm\LoginForm\obj\Debug\LoginForm.pdb
+C:\Users\carlj\Downloads\EDP_FullProject_BSIT2B-main\EDP_FullProject_BSIT2B-main\LoginForm\bin\Debug\LoginForm.exe.config
+C:\Users\carlj\Downloads\EDP_FullProject_BSIT2B-main\EDP_FullProject_BSIT2B-main\LoginForm\bin\Debug\LoginForm.exe
+C:\Users\carlj\Downloads\EDP_FullProject_BSIT2B-main\EDP_FullProject_BSIT2B-main\LoginForm\bin\Debug\LoginForm.pdb
+C:\Users\carlj\Downloads\EDP_FullProject_BSIT2B-main\EDP_FullProject_BSIT2B-main\LoginForm\obj\Debug\LoginForm.csproj.AssemblyReference.cache
+C:\Users\carlj\Downloads\EDP_FullProject_BSIT2B-main\EDP_FullProject_BSIT2B-main\LoginForm\obj\Debug\LoginForm.Form1.resources
+C:\Users\carlj\Downloads\EDP_FullProject_BSIT2B-main\EDP_FullProject_BSIT2B-main\LoginForm\obj\Debug\LoginForm.Properties.Resources.resources
+C:\Users\carlj\Downloads\EDP_FullProject_BSIT2B-main\EDP_FullProject_BSIT2B-main\LoginForm\obj\Debug\LoginForm.csproj.GenerateResource.cache
+C:\Users\carlj\Downloads\EDP_FullProject_BSIT2B-main\EDP_FullProject_BSIT2B-main\LoginForm\obj\Debug\LoginForm.csproj.CoreCompileInputs.cache
+C:\Users\carlj\Downloads\EDP_FullProject_BSIT2B-main\EDP_FullProject_BSIT2B-main\LoginForm\obj\Debug\LoginForm.exe
+C:\Users\carlj\Downloads\EDP_FullProject_BSIT2B-main\EDP_FullProject_BSIT2B-main\LoginForm\obj\Debug\LoginForm.pdb
+C:\Users\carlj\Downloads\EDP_FullProject_BSIT2B-main\EDP_FullProject_BSIT2B-main\LoginForm\obj\Debug\LoginForm.frmHome.resources
+C:\Users\carlj\Downloads\EDP_FullProject_BSIT2B-main\EDP_FullProject_BSIT2B-main\LoginForm\obj\Debug\LoginForm.Pricebook.resources
+C:\Users\carlj\Downloads\EDP_FullProject_BSIT2B-main\EDP_FullProject_BSIT2B-main\LoginForm\obj\Debug\LoginForm.Registration.resources
+C:\Users\carlj\Downloads\EDP_FullProject_BSIT2B-main\EDP_FullProject_BSIT2B-main\LoginForm\obj\Debug\LoginForm.StoreStatus.resources
+C:\Users\carlj\Downloads\EDP_FullProject_BSIT2B-main\EDP_FullProject_BSIT2B-main\LoginForm\obj\Debug\LoginForm.TimeClock.resources
+C:\Users\carlj\Downloads\EDP_FullProject_BSIT2B-main\EDP_FullProject_BSIT2B-main\LoginForm\obj\Debug\LoginForm.Users.resources
+C:\Users\carlj\Downloads\EDP_FullProject_BSIT2B-main\EDP_FullProject_BSIT2B-main\LoginForm\obj\Debug\LoginForm.Vendors.resources
