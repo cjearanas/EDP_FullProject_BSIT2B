@@ -25,3 +25,26 @@ C:\Users\carlj\Downloads\EDP_FullProject_BSIT2B-main\EDP_FullProject_BSIT2B-main
 C:\Users\carlj\Downloads\EDP_FullProject_BSIT2B-main\EDP_FullProject_BSIT2B-main\LoginForm\obj\Debug\LoginForm.TimeClock.resources
 C:\Users\carlj\Downloads\EDP_FullProject_BSIT2B-main\EDP_FullProject_BSIT2B-main\LoginForm\obj\Debug\LoginForm.Users.resources
 C:\Users\carlj\Downloads\EDP_FullProject_BSIT2B-main\EDP_FullProject_BSIT2B-main\LoginForm\obj\Debug\LoginForm.Vendors.resources
+C:\Users\COLLEGE STUDENT\Source\Repos\EDP_FullProject_BSIT2B\LoginForm\bin\Debug\LoginForm.exe.config
+C:\Users\COLLEGE STUDENT\Source\Repos\EDP_FullProject_BSIT2B\LoginForm\bin\Debug\LoginForm.exe
+C:\Users\COLLEGE STUDENT\Source\Repos\EDP_FullProject_BSIT2B\LoginForm\bin\Debug\LoginForm.pdb
+C:\Users\COLLEGE STUDENT\Source\Repos\EDP_FullProject_BSIT2B\LoginForm\obj\Debug\LoginForm.csproj.AssemblyReference.cache
+C:\Users\COLLEGE STUDENT\Source\Repos\EDP_FullProject_BSIT2B\LoginForm\obj\Debug\LoginForm.exe.config
+C:\Users\COLLEGE STUDENT\Source\Repos\EDP_FullProject_BSIT2B\LoginForm\obj\Debug\LoginForm.Form1.resources
+C:\Users\COLLEGE STUDENT\Source\Repos\EDP_FullProject_BSIT2B\LoginForm\obj\Debug\LoginForm.frmHome.resources
+C:\Users\COLLEGE STUDENT\Source\Repos\EDP_FullProject_BSIT2B\LoginForm\obj\Debug\LoginForm.Pricebook.resources
+C:\Users\COLLEGE STUDENT\Source\Repos\EDP_FullProject_BSIT2B\LoginForm\obj\Debug\LoginForm.Properties.Resources.resources
+C:\Users\COLLEGE STUDENT\Source\Repos\EDP_FullProject_BSIT2B\LoginForm\obj\Debug\LoginForm.Registration.resources
+C:\Users\COLLEGE STUDENT\Source\Repos\EDP_FullProject_BSIT2B\LoginForm\obj\Debug\LoginForm.StoreStatus.resources
+C:\Users\COLLEGE STUDENT\Source\Repos\EDP_FullProject_BSIT2B\LoginForm\obj\Debug\LoginForm.TimeClock.resources
+C:\Users\COLLEGE STUDENT\Source\Repos\EDP_FullProject_BSIT2B\LoginForm\obj\Debug\LoginForm.Users.resources
+C:\Users\COLLEGE STUDENT\Source\Repos\EDP_FullProject_BSIT2B\LoginForm\obj\Debug\LoginForm.Vendors.resources
+C:\Users\COLLEGE STUDENT\Source\Repos\EDP_FullProject_BSIT2B\LoginForm\obj\Debug\LoginForm.csproj.GenerateResource.cache
+C:\Users\COLLEGE STUDENT\Source\Repos\EDP_FullProject_BSIT2B\LoginForm\obj\Debug\LoginForm.csproj.CoreCompileInputs.cache
+C:\Users\COLLEGE STUDENT\Source\Repos\EDP_FullProject_BSIT2B\LoginForm\obj\Debug\LoginForm.exe
+C:\Users\COLLEGE STUDENT\Source\Repos\EDP_FullProject_BSIT2B\LoginForm\obj\Debug\LoginForm.pdb
+C:\Users\COLLEGE STUDENT\Source\Repos\EDP_FullProject_BSIT2B\LoginForm\bin\Debug\MySql.Data.dll
+C:\Users\COLLEGE STUDENT\Source\Repos\EDP_FullProject_BSIT2B\LoginForm\bin\Debug\System.Memory.dll
+C:\Users\COLLEGE STUDENT\Source\Repos\EDP_FullProject_BSIT2B\LoginForm\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\COLLEGE STUDENT\Source\Repos\EDP_FullProject_BSIT2B\LoginForm\bin\Debug\MySql.Data.xml
+C:\Users\COLLEGE STUDENT\Source\Repos\EDP_FullProject_BSIT2B\LoginForm\obj\Debug\LoginForm.csproj.Up2Date

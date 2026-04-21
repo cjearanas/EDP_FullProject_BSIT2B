@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using Mysqlx.Prepare;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +23,7 @@ namespace LoginForm
         {
             InitializeComponent();
         }
+        MyDatabase db = new MyDatabase();
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -51,26 +54,26 @@ namespace LoginForm
             }
             else
             {
-                for (int x = 0; x < userCredentials.GetLength(0); x++)
-                {
-                    if (tbUsername.Text == userCredentials[x, 0])
-                    {
-                        if (tbPassword.Text == userCredentials[x, 1])
-                        {
-                            frmHome frm = new frmHome();
-                            MessageBox.Show("Welcome " + userCredentials[x, 2]);
-                            this.Hide();
-                            frm.Owner = this;
-                            frm.Show(); 
-                            break;
-                        }
-                        else
-                        {
-                            MessageBox.Show("invalid Username/Password");
-                            break;
-                        }
-                    }
+                DataTable dt = db.ExecuteReturnQuery("select * from tblLoginCredentials where user_username = @uname and user_password = @pword;",
+         new MySqlParameter("@uname",tbUsername.Text),
+         new MySqlParameter("@pword",tbPassword.Text));
+                if (dt.Rows.Count == 1) { 
+                    frmHome frm = new frmHome();
+                    this.Hide();
+                    frm.Show();
                 }
+            }
+        }
+        
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            if (db.TestConnection() == true)
+            {
+                MessageBox.Show("Connected Successfully");
+            }
+            else
+            {
+                MessageBox.Show("Ayaw amp");
             }
         }
     }
