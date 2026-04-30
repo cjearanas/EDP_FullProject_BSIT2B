@@ -169,6 +169,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmHome";
             this.Text = "frmHome";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmHome_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

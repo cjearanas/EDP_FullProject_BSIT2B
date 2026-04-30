@@ -58,6 +58,7 @@ namespace LoginForm
         private void btnUsers_Click(object sender, EventArgs e)
         {
             Users frm = new Users();
+            this.Hide();
             frm.Show();
         }
 
@@ -71,6 +72,12 @@ namespace LoginForm
         {
             this.Owner.Show(); 
             this.Close();
+        }
+
+        private void frmHome_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Form1 frm = new Form1();
+            frm.Show();
         }
     }
 }

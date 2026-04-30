@@ -14,17 +14,18 @@ namespace LoginForm
 {
     public partial class Form1 : Form
     {
-        String[,] userCredentials =
-        {
-            {"admin","1234","Carl Aranas" },
-            {"bossing","Aray koo","Boss" }
-        };
+       
         public Form1()
         {
             InitializeComponent();
         }
         MyDatabase db = new MyDatabase();
 
+        String[,] userCredentials =
+       {
+            {"admin","1234","Carl Aranas" },
+            {"bossing","Aray koo","Boss" }
+        };
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -59,14 +60,17 @@ namespace LoginForm
          new MySqlParameter("@pword",tbPassword.Text));
                 if (dt.Rows.Count == 1) { 
                     frmHome frm = new frmHome();
+                    frm.Owner = this;
                     this.Hide();
                     frm.Show();
                 }
+
             }
         }
         
         private void Form1_Load(object sender, EventArgs e)
         {
+            tbPassword.UseSystemPasswordChar = true;
             if (db.TestConnection() == true)
             {
                 MessageBox.Show("Connected Successfully");
