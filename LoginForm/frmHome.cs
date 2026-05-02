@@ -70,13 +70,16 @@ namespace LoginForm
 
         private void btnBck_Click(object sender, EventArgs e)
         {
-            this.Owner.Show(); 
+            if (this.Owner == null)
+            {
+                this.Owner.Show();
+            }
             this.Close();
         }
 
         private void frmHome_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Form1 frm = new Form1();
+            Form1 frm = new Form1(); 
             frm.Show();
         }
     }

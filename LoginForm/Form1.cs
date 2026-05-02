@@ -58,9 +58,9 @@ namespace LoginForm
                 DataTable dt = db.ExecuteReturnQuery("select * from tblLoginCredentials where user_username = @uname and user_password = @pword;",
          new MySqlParameter("@uname",tbUsername.Text),
          new MySqlParameter("@pword",tbPassword.Text));
-                if (dt.Rows.Count == 1) { 
-                    frmHome frm = new frmHome();
-                    frm.Owner = this;
+                if (dt.Rows.Count == 1) {
+                    frmHome frm = new frmHome(); 
+                    frm.Owner = this; 
                     this.Hide();
                     frm.Show();
                 }

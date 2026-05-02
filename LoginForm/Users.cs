@@ -18,8 +18,64 @@ namespace LoginForm
         {
             InitializeComponent();
             dgvUsers.CellFormatting += dgvUsers_CellFormatting;
+            dgvUsers.CellClick += dgvUsers_CellClick;
+            dgvUsers.MouseDown += dgvUsers_MouseDown;
         }
         MyDatabase db = new MyDatabase();
+        int selectedUserID = -1;
+        int selectedLoginID = -1;
+        private void dgvUsers_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvUsers.SelectedRows.Count == 0)
+            {
+                ClearFields();
+            }
+        }
+
+        private void ClearFields()
+        {
+            tbFname.Clear();
+            tbMname.Clear();
+            tbLname.Clear();
+            tbEmailAdd.Clear();
+            tbHomeAdd.Clear();
+            tbUsername.Clear();
+            tbPassword.Clear();
+            dtpBirthDate.Value = DateTime.Now;
+
+            selectedUserID = -1;
+            selectedLoginID = -1;
+        }
+        private void dgvUsers_MouseDown(object sender, MouseEventArgs e)
+        {
+            var hit = dgvUsers.HitTest(e.X, e.Y);
+
+            // If user clicks outside rows
+            if (hit.RowIndex == -1)
+            {
+                dgvUsers.ClearSelection();
+                ClearFields();
+            }
+        }
+        private void dgvUsers_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvUsers.Rows[e.RowIndex];
+
+                selectedUserID = Convert.ToInt32(row.Cells["userID"].Value);
+                selectedLoginID = Convert.ToInt32(row.Cells["LoginID"].Value);
+
+                tbFname.Text = row.Cells["firstname"].Value.ToString();
+                tbMname.Text = row.Cells["middlename"].Value.ToString();
+                tbLname.Text = row.Cells["lastname"].Value.ToString();
+                tbEmailAdd.Text = row.Cells["emailAddress"].Value.ToString();
+                tbHomeAdd.Text = row.Cells["homeAddress"].Value.ToString();
+                dtpBirthDate.Value = Convert.ToDateTime(row.Cells["birthDate"].Value);
+                tbUsername.Text = row.Cells["Username"].Value.ToString();
+                tbPassword.Text = row.Cells["Password"].Value.ToString();
+            }
+        }
         private void dgvUsers_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (dgvUsers.Columns[e.ColumnIndex].Name == "Password" && e.Value != null)
@@ -29,7 +85,7 @@ namespace LoginForm
         }
         private void Users_Load(object sender, EventArgs e)
         {
-            string query = "SELECT tbluserinformation.userID, tbllogincredentials.LoginID, tbluserinformation.firstname, tbluserinformation.middlename, tbluserinformation.lastname, tbluserinformation.emailAddress, tbluserinformation.homeAddress, tbluserinformation.birthDate, tbllogincredentials.user_username as 'Username', tbllogincredentials.user_password as 'Password' FROM tbllogincredentials INNER JOIN tbluserinformation ON tbllogincredentials.userID = tbluserinformation.userID;";
+            string query = "SELECT tbluserinformation.userID, tbllogincredentials.LoginID, tbluserinformation.firstname, tbluserinformation.middlename, tbluserinformation.lastname, tbluserinformation.emailAddress, tbluserinformation.homeAddress, tbluserinformation.birthDate, tbllogincredentials.user_username as 'Username', tbllogincredentials.user_password as 'Password' FROM tbllogincredentials INNER JOIN tbluserinformation ON tbllogincredentials.userID = tbluserinformation.userID WHERE tbluserinformation.isActive = 1;";
 
             dgvUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvUsers.DataSource = db.ExecuteReturnQuery(query);
@@ -63,10 +119,78 @@ namespace LoginForm
             {
                 MessageBox.Show("Data Inserted!");
                 Users_Load(null, null);
+                ClearFields();
+            }
+            
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (selectedUserID == -1)
+            {
+                MessageBox.Show("Please select a user first.");
+                return;
             }
 
+            string query = @"UPDATE tbluserinformation 
+                     SET firstname=@fname, middlename=@mname, lastname=@lname, 
+                         emailAddress=@email, homeAddress=@hadd, birthDate=@bDate
+                     WHERE userID=@uid;
 
+                     UPDATE tbllogincredentials 
+                     SET user_username=@username, user_password=@password
+                     WHERE LoginID=@lid;";
 
+            int result = db.ExecuteNoReturnQuery(query,
+                new MySqlParameter("@fname", tbFname.Text),
+                new MySqlParameter("@mname", tbMname.Text),
+                new MySqlParameter("@lname", tbLname.Text),
+                new MySqlParameter("@email", tbEmailAdd.Text),
+                new MySqlParameter("@hadd", tbHomeAdd.Text),
+                new MySqlParameter("@bDate", dtpBirthDate.Value),
+                new MySqlParameter("@username", tbUsername.Text),
+                new MySqlParameter("@password", tbPassword.Text),
+                new MySqlParameter("@uid", selectedUserID),
+                new MySqlParameter("@lid", selectedLoginID)
+            );
+
+            if (result > 0)
+            {
+                MessageBox.Show("User Updated!");
+                Users_Load(null, null);
+            }
+        }
+
+        private void btnDeactivate_Click(object sender, EventArgs e)
+        {
+            if (selectedUserID == -1)
+            {
+                MessageBox.Show("Please select a user first.");
+                return;
+            }
+
+            DialogResult confirm = MessageBox.Show(
+                "Are you sure you want to deactivate this user?",
+                "Confirm",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
+
+            if (confirm == DialogResult.Yes)
+            {
+                string query = "UPDATE tbluserinformation SET isActive = 0 WHERE userID = @uid;";
+
+                int result = db.ExecuteNoReturnQuery(query,
+                    new MySqlParameter("@uid", selectedUserID)
+                );
+
+                if (result > 0)
+                {
+                    MessageBox.Show("User deactivated!");
+                    Users_Load(null, null);
+                    ClearFields();
+                }
+            }
         }
     }
 }
