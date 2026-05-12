@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 30, 2026 at 10:48 AM
+-- Generation Time: May 12, 2026 at 05:02 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -40,9 +40,12 @@ CREATE TABLE `tbllogincredentials` (
 --
 
 INSERT INTO `tbllogincredentials` (`loginID`, `user_username`, `user_password`, `userID`, `is_active`) VALUES
-(2, 'user1', 'password', 2, 1),
-(3, 'admin', 'admin', 1, 1),
-(4, 'boss', 'araykoo', 3, 1);
+(2, 'user11', 'password', 2, 0),
+(3, 'admin', '1234', 1, 1),
+(4, 'boss', 'araykoo', 3, 1),
+(5, 'boss', '`boss', 4, 1),
+(6, 'awe', 'awe', 5, 1),
+(7, 'ewrqwerqw', 'ewqrqwerewq', 6, 0);
 
 -- --------------------------------------------------------
 
@@ -66,8 +69,11 @@ CREATE TABLE `tbluserinformation` (
 
 INSERT INTO `tbluserinformation` (`userID`, `firstname`, `middlename`, `lastname`, `emailAddress`, `homeAddress`, `birthDate`) VALUES
 (1, 'Carl', 'Estipona', 'Aranas', 'carljerald@gmail.com', 'paliparan3', '1998-08-15'),
-(2, 'user', 'user', 'user', 'user@gmail.com', 'user', '2026-04-15'),
-(3, 'Bruce', 'Jet', 'Lee', 'bruce.lee@gmail.com', 'cavite city', '2026-04-14');
+(2, 'user1', 'user', 'user', 'user@gmail.com', 'user', '2026-04-15'),
+(3, 'Bruce', 'Jet', 'Lee', 'bruce.lee@gmail.com', 'cavite city', '2026-04-14'),
+(4, 'asdfas', 'saga', 'sadfe', 'sdfaf@gmail.com', 'asdfweqrwq', '2026-05-02'),
+(5, 'aewqrwq', 'aea', 'ae', 'ae', 'ae', '2026-05-02'),
+(6, 'asdfew', 'qerqewr', 'qewrqewr', 'qwerqwer', 'weqrqwerqew', '2026-05-02');
 
 --
 -- Indexes for dumped tables
@@ -93,13 +99,13 @@ ALTER TABLE `tbluserinformation`
 -- AUTO_INCREMENT for table `tbllogincredentials`
 --
 ALTER TABLE `tbllogincredentials`
-  MODIFY `loginID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `loginID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tbluserinformation`
 --
 ALTER TABLE `tbluserinformation`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -48,6 +48,7 @@
             this.tbFname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvUsers = new System.Windows.Forms.DataGridView();
+            this.cbSP = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -226,11 +227,22 @@
             this.dgvUsers.Size = new System.Drawing.Size(544, 459);
             this.dgvUsers.TabIndex = 20;
             // 
+            // cbSP
+            // 
+            this.cbSP.AutoSize = true;
+            this.cbSP.Location = new System.Drawing.Point(292, 406);
+            this.cbSP.Name = "cbSP";
+            this.cbSP.Size = new System.Drawing.Size(22, 21);
+            this.cbSP.TabIndex = 40;
+            this.cbSP.UseVisualStyleBackColor = true;
+            this.cbSP.CheckedChanged += new System.EventHandler(this.cbSP_CheckedChanged);
+            // 
             // Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(926, 563);
+            this.Controls.Add(this.cbSP);
             this.Controls.Add(this.btnDeactivate);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSave);
@@ -283,5 +295,6 @@
         private System.Windows.Forms.TextBox tbFname;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvUsers;
+        private System.Windows.Forms.CheckBox cbSP;
     }
 }

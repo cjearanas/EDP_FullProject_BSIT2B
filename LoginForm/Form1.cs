@@ -55,7 +55,7 @@ namespace LoginForm
             }
             else
             {
-                DataTable dt = db.ExecuteReturnQuery("select * from tblLoginCredentials where user_username = @uname and user_password = @pword;",
+                DataTable dt = db.ExecuteReturnQuery("select * from tblLoginCredentials where user_username = @uname and user_password = @pword and is_active = 1;",
          new MySqlParameter("@uname",tbUsername.Text),
          new MySqlParameter("@pword",tbPassword.Text));
                 if (dt.Rows.Count == 1) {
@@ -63,6 +63,10 @@ namespace LoginForm
                     frm.Owner = this; 
                     this.Hide();
                     frm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Username or Password!");
                 }
 
             }
