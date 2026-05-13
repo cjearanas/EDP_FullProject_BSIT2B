@@ -55,14 +55,23 @@ namespace LoginForm
             }
             else
             {
-                DataTable dt = db.ExecuteReturnQuery("select * from tblLoginCredentials where user_username = @uname and user_password = @pword and is_active = 1;",
+                DataTable dt = db.ExecuteReturnQuery("select * from tblLoginCredentials where user_username = @uname and user_password = @pword;",
          new MySqlParameter("@uname",tbUsername.Text),
          new MySqlParameter("@pword",tbPassword.Text));
-                if (dt.Rows.Count == 1) {
-                    frmHome frm = new frmHome(); 
-                    frm.Owner = this; 
-                    this.Hide();
-                    frm.Show();
+                if (dt.Rows.Count == 1)
+                {
+                    
+                    if (Convert.ToInt32(dt.Rows[0]["is_active"]) == 1)
+                    {
+                        frmHome frm = new frmHome();
+                        frm.Owner = this;
+                        this.Hide();
+                        frm.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Your account has been deactivated!", "Account Deactivated");
+                    }
                 }
                 else
                 {
